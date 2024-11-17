@@ -1,5 +1,6 @@
 {
   "MEMPOOL": {
+    "OFFICIAL": true,
     "ENABLED": false,
     "NETWORK": "testnet",
     "BACKEND": "esplora",
@@ -63,8 +64,7 @@
   "LIGHTNING": {
     "ENABLED": true,
     "BACKEND": "cln",
-    "GRAPH_REFRESH_INTERVAL": 60,
-    "TOPOLOGY_FOLDER": ""
+    "GRAPH_REFRESH_INTERVAL": 60
   },
   "CLIGHTNING": {
     "SOCKET": "/cln/.lightning/testnet/lightning-rpc"

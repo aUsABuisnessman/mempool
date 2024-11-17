@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Env, StateService } from '../../services/state.service';
-import { restApiDocsData } from './api-docs-data';
-import { faqData } from './api-docs-data';
+import { Env, StateService } from '@app/services/state.service';
+import { restApiDocsData } from '@app/docs/api-docs/api-docs-data';
+import { faqData } from '@app/docs/api-docs/api-docs-data';
 
 @Component({
   selector: 'app-api-docs-nav',
@@ -33,8 +33,9 @@ export class ApiDocsNavComponent implements OnInit {
     }
   }
 
-  navLinkClick(event) {
-    this.navLinkClickEvent.emit(event);
+  navLinkClick(event, fragment) {
+    event.preventDefault();
+    this.navLinkClickEvent.emit({event: event, fragment: fragment});
   }
 
 }
